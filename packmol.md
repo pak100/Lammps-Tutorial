@@ -7,7 +7,9 @@ Then, download packmol with the command
 
 ```bash
     > curl -L http://www.ime.unicamp.br/~martinez/packmol/packmol.tar.gz > packmol.tar.gz.`
-    # dfdf
 ```
 
+Extract files from the archive 
+
+(To Do: Try this out)
 
