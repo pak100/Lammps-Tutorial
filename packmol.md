@@ -7,7 +7,7 @@
 2. After registering, you can install the packmol.tar.gz file.  
 
 ```bash
-    > curl -L http://www.ime.unicamp.br/~martinez/packmol/packmol.tar.gz > packmol.tar.gz.`
+    > curl -L http://www.ime.unicamp.br/~martinez/packmol/packmol.tar.gz > packmol.tar.gz
     # % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  # Dload  Upload   Total   Spent    Left  Speed
 # 100  175k  100  175k    0     0   108k      0  0:00:01  0:00:01 --:--:--  108k
@@ -40,7 +40,7 @@
 ```
     > cd packmol/
 ```
-7. From here, you need to "smooth out the kinks" of the packmol package using the command `make`. You should get the output that 
+7. From here, you need to compile the source code and link it into an executable file, using the command `make`. You should get the output that 
 **packmol was successfully built**.
 
 ```
