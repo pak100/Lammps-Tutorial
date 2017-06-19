@@ -27,12 +27,8 @@
 3. Now you can install **fortran**.  
 
 ```
-    > sudo apt-get install gfortran
-```
-4. The output of that command should ask you if you want to contiune to which you should enter a capital **Y**. 
+    > sudo apt-get install -y gfortran
 
-```
-    > Do you want to continue? [Y/n] Y
 ```
 5. Next, you need to *expand* your tar file (packmol.tar.gz). 
 
