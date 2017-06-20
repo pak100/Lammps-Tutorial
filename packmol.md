@@ -68,17 +68,18 @@ filetype xyz
 output argon.xyz  
 
 structure argon1.xyz  
-(space) number 108  
-(space) inside box -20 -20 -20 20 20 20  
+ number 108
+ inside box -20 -20 -20 20 20 20
 end structure
 ```
 * The `tolerance` sets the limit on how close atoms can be built together. It is `2.0` for 2.0 Å (angstroms)  
 * The `filetype` sets the type of files that this simulation will run. We are going to use the xyz file type.  
 * The `output` will create an output file named after what is written after the command. In this case, `output.xyz`.  
 * After a line break, the `structure` command uses the information from the **argon1.xyz** file (which you will create next). The program builds from the first three (random) coordinates taken from this file.  
-* There is *one* space before `number`, which sets the number of atoms built from packmol. 
-* There is also *one* space before `inside box`, which builds the atoms in a 3Dimensional box with coordinates (-x, -y, -z, x, y, z). 
-*Finally, `end structure` stops running the program. 
+* Each line within the `structure` block is indented by *exactly one space*.
+* The `number` sets the number of atoms built from packmol.
+* The `inside box` builds the atoms in a 3Dimensional box with coordinates (-x, -y, -z, x, y, z).
+* Finally, `end structure` stops running the program.
 4. After you have finished writing the limitations save the file with **command S**. 
 
 5. Now you need to create the `argon1.xyz` file, which contains the random coordinates of one atom.
