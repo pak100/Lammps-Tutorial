@@ -1,5 +1,6 @@
 ## Packmol: Building the Initial Configurations for Your Molecular Dynamics Simulation 
 ---
+(Give a small explanation as to what packmol is exactly, and what it is going to do for those interested)
 
 ### Registering and Installing Packmol 
 
@@ -10,7 +11,7 @@
     > curl -L http://www.ime.unicamp.br/~martinez/packmol/packmol.tar.gz > packmol.tar.gz.`
     # % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  # Dload  Upload   Total   Spent    Left  Speed
-# 100  175k  100  175k    0     0   108k      0  0:00:01  0:00:01 --:--:--  108k
+    # 100  175k  100  175k    0     0   108k      0  0:00:01  0:00:01 --:--:--  108k
 ```
 ---
 
@@ -37,7 +38,7 @@
 5. Next, you need to *expand* your tar file (packmol.tar.gz). 
 
 ```
-    > tar -xzf packmol.tar.gz. 
+    > tar -xzf packmol.tar.gz 
 ```
 6. Now, change your directory into the packmol directory. 
 
