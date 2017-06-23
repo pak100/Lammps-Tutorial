@@ -26,21 +26,11 @@
 ```
 * It takes a minute, but you should get a final **done.** in the last output line. 
 
-7. Here, you need to copy the **firefox.conf** and create a new file called **vmd.conf**. Then, *open* up the new file. 
-
+6. **firefox.conf** contains the phrase `firefox` twice at the end of the file. Create a file named **vmd.conf** with the same content, but with `firefox` replaced with `vmd`. You can open the file, make the changes, and save as **vmd.conf**; or use `sed` substitution.
+```bash
+    > sed s/firefox/vmd/g firefox.conf > vmd.conf
 ```
-    > cp firefox.conf vmd.conf
-    > c9 open vmd.conf
-```
-6. You need to change some of the wording of the document to make sure it works for **VMD**. Go to the last stanza or paragraph where it says 
-
-```
-    [program:firefox]
-    command=firefox
-    environment=DISPLAY=":99"]
-```
-7. Change the program from `firefox` to `vmd`. Then, in the *next* line change the command again from `firefox` to `vmd`. Now you can save (command S) and close the vmd.conf file. 
-
+7. Check the new file by opening it (or with `tail -3 vmd.conf`). The last three lines should look like:
 ```
     [program:vmd]
     command=vmd
