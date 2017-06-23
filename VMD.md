@@ -84,6 +84,14 @@
     # VMD installation complete.  Enjoy!
 ```
 10. You should get a success output. This means VMD can be run on cloud9 with the command `vmd`. 
+11. To test the installation, run vmd. You should get a vmd-specific console prompt. Type `quit` at the prompt to exit vmd.
+```bash
+    > vmd
+    # vmd > quit
+    # Info) VMD for LINUXAMD64, version 1.9.3 (November 30, 2016)
+    # Info) Exiting normally.
+```
+    
 
 ### Using VMD
 
