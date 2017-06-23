@@ -69,15 +69,19 @@
 ```
     > cd vmd-1.9.3
 ```
-8. Once you are in the directory, configure the program with the following command.
-```
+8. Once you are in the directory, configure the program with the following command. If successful, will return a message listing the configuration options.
+```bash
     > ./configure 
+    # using configure.options: LINUXAMD64 OPENGL OPENGLPBUFFER FLTK TK ACTC CUDA IMD LIBSBALL XINERAMA XINPUT LIBOPTIX LIBOSPRAY LIBTACHYON VRPN NETCDF COLVARS TCL PYTHON PTHREADS NUMPY SILENT ICC
 ```
-9. Now, change you directory into the `src` directory and make install the program. 
+9. Now, change you directory into the `src` directory and make install the program. Since this runs in Cloud9, the installer will use bash. If successful, will output a congratulatory message.
 
-```
+```bash
     > cd src
     > sudo make install
+    # Info: /bin/csh shell not found, installing Bourne shell startup script instead
+    # Make sure /usr/local/bin/vmd is in your path.
+    # VMD installation complete.  Enjoy!
 ```
 10. You should get a success output. This means VMD can be run on cloud9 with the command `vmd`. 
 
