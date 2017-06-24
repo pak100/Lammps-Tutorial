@@ -1,42 +1,5 @@
 ## VMD: Visualize Molecular Dynamics
 
-## Installing No-VNC into Cloud9
-
- 1. As you probably know now, cloud9 is a *cloud* computer, but it does not have a screen, which we will need to manipulte the atoms on **VMD**.  
- 2. In order to make sure that cloud9 has the right graphics processing, you will need to install **Mesa**
-
-```bash
-    > sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
-
-````
-3. Now, you can clone the **no-Vnc** from github
-
-```
-    > git clone https://github.com/garcias/cloud9-vnc.git
-
-```
-4. Now, *change directories* into the newly created **cloud9-vnc** dicrectory 
-
-```
-    > cd cloud9-vnc\
-```
-5. Now you need to fully **install** No-vnc. Once you are in the directory run the next command to install the program. 
-```
-    > ./install.sh
-```
-* It takes a minute, but you should get a final **done.** in the last output line. 
-
-6. **firefox.conf** contains the phrase `firefox` twice at the end of the file. Create a file named **vmd.conf** with the same content, but with `firefox` replaced with `vmd`. You can open the file, make the changes, and save as **vmd.conf**; or use `sed` substitution.
-```bash
-    > sed s/firefox/vmd/g firefox.conf > vmd.conf
-```
-7. Check the new file by opening it (or with `tail -3 vmd.conf`). The last three lines should look like:
-```
-    [program:vmd]
-    command=vmd
-    environment=DISPLAY=":99"
-```
-
 ### Downloading and installing *VMD*
 
 ---
@@ -82,6 +45,43 @@
     # Info) Exiting normally.
 ```
     
+## Installing No-VNC into Cloud9
+
+ 1. As you probably know now, cloud9 is a *cloud* computer, but it does not have a screen, which we will need to manipulte the atoms on **VMD**.  
+ 2. In order to make sure that cloud9 has the right graphics processing, you will need to install **Mesa**
+
+```bash
+    > sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+
+````
+3. Now, you can clone the **no-Vnc** from github
+
+```
+    > git clone https://github.com/garcias/cloud9-vnc.git
+
+```
+4. Now, *change directories* into the newly created **cloud9-vnc** dicrectory 
+
+```
+    > cd cloud9-vnc\
+```
+5. Now you need to fully **install** No-vnc. Once you are in the directory run the next command to install the program. 
+```
+    > ./install.sh
+```
+* It takes a minute, but you should get a final **done.** in the last output line. 
+
+6. **firefox.conf** contains the phrase `firefox` twice at the end of the file. Create a file named **vmd.conf** with the same content, but with `firefox` replaced with `vmd`. You can open the file, make the changes, and save as **vmd.conf**; or use `sed` substitution.
+```bash
+    > sed s/firefox/vmd/g firefox.conf > vmd.conf
+```
+7. Check the new file by opening it (or with `tail -3 vmd.conf`). The last three lines should look like:
+```
+    [program:vmd]
+    command=vmd
+    environment=DISPLAY=":99"
+```
+
 
 ### Using VMD
 
