@@ -1,5 +1,50 @@
 ## VMD: Visualize Molecular Dynamics
 
+### Downloading and installing *VMD*
+
+---
+
+1. Head to the [VMD website](http://www.ks.uiuc.edu/Research/vmd/) and click **Downloading VMD** on the left menu. 
+2. Click the second option or LINUX_64 OpenGL, CUDA, OptiX, OSPRay. 
+3. Now, you need to **register** with VMD in order to get the tarball file to download. 
+4. Once, you agree to their terms and conditions, your tarball file should start downloading shortly afterwards. 
+5. Now change your directory out of the `cloud9-vnc` directory back into the `workspace`.
+```
+    > cd ..
+```
+5. Now, using the cloud9 menu options clicking *file* and *upload local files*, select recent downloads and select the **vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz**.
+6. You need to expand the tarball file
+```
+    > tar -xf vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz
+```
+7. This will create a new directory called `vmd-1.9.3`. Change your directory into the directory.
+
+```
+    > cd vmd-1.9.3
+```
+8. Once you are in the directory, configure the program with the following command. If successful, will return a message listing the configuration options.
+```bash
+    > ./configure 
+    # using configure.options: LINUXAMD64 OPENGL OPENGLPBUFFER FLTK TK ACTC CUDA IMD LIBSBALL XINERAMA XINPUT LIBOPTIX LIBOSPRAY LIBTACHYON VRPN NETCDF COLVARS TCL PYTHON PTHREADS NUMPY SILENT ICC
+```
+9. Now, change you directory into the `src` directory and make install the program. Since this runs in Cloud9, the installer will use bash. If successful, will output a congratulatory message.
+
+```bash
+    > cd src
+    > sudo make install
+    # Info: /bin/csh shell not found, installing Bourne shell startup script instead
+    # Make sure /usr/local/bin/vmd is in your path.
+    # VMD installation complete.  Enjoy!
+```
+10. You should get a success output. This means VMD can be run on cloud9 with the command `vmd`. 
+11. To test the installation, run vmd. You should get a vmd-specific console prompt. Type `quit` at the prompt to exit vmd.
+```bash
+    > vmd
+    # vmd > quit
+    # Info) VMD for LINUXAMD64, version 1.9.3 (November 30, 2016)
+    # Info) Exiting normally.
+```
+    
 ## Installing No-VNC into Cloud9
 
  1. As you probably know now, cloud9 is a *cloud* computer, but it does not have a screen, which we will need to manipulte the atoms on **VMD**.  
@@ -26,60 +71,17 @@
 ```
 * It takes a minute, but you should get a final **done.** in the last output line. 
 
-7. Here, you need to copy the **firefox.conf** and create a new file called **vmd.conf**. Then, *open* up the new file. 
-
+6. **firefox.conf** contains the phrase `firefox` twice at the end of the file. Create a file named **vmd.conf** with the same content, but with `firefox` replaced with `vmd`. You can open the file, make the changes, and save as **vmd.conf**; or use `sed` substitution.
+```bash
+    > sed s/firefox/vmd/g firefox.conf > vmd.conf
 ```
-    > cp firefox.conf vmd.conf
-    > c9 open vmd.conf
-```
-6. You need to change some of the wording of the document to make sure it works for **VMD**. Go to the last stanza or paragraph where it says 
-
-```
-    [program:firefox]
-    command=firefox
-    environment=DISPLAY=":99"]
-```
-7. Change the program from `firefox` to `vmd`. Then, in the *next* line change the command again from `firefox` to `vmd`. Now you can save (command S) and close the vmd.conf file. 
-
+7. Check the new file by opening it (or with `tail -3 vmd.conf`). The last three lines should look like:
 ```
     [program:vmd]
     command=vmd
     environment=DISPLAY=":99"
 ```
 
-### Downloading and installing *VMD*
-
----
-
-1. Head to the [VMD website](http://www.ks.uiuc.edu/Research/vmd/) and click **Downloading VMD** on the left menu. 
-2. Click the second option or LINUX_64 OpenGL, CUDA, OptiX, OSPRay. 
-3. Now, you need to **register** with VMD in order to get the tarball file to download. 
-4. Once, you agree to their terms and conditions, your tarball file should start downloading shortly afterwards. 
-5. Now change your directory out of the `cloud9-vnc` directory back into the `workspace`.
-```
-    > cd ..
-```
-5. Now, using the cloud9 menu options clicking *file* and *upload local files*, select recent downloads and select the **vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz**.
-6. You need to expand the tarball file
-```
-    > tar -xf vmd-1.9.3.bin.LINUXAMD64-CUDA8-OptiX4-OSPRay111p1.opengl.tar.gz
-```
-7. This will create a new directory called `vmd-1.9.3`. Change your directory into the directory.
-
-```
-    > cd vmd-1.9.3
-```
-8. Once you are in the directory, configure the program with the following command.
-```
-    > ./configure 
-```
-9. Now, change you directory into the `src` directory and make install the program. 
-
-```
-    > cd src
-    > sudo make install
-```
-10. You should get a success output. This means VMD can be run on cloud9 with the command `vmd`. 
 
 ### Using VMD
 
