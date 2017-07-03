@@ -9,7 +9,7 @@
 1. First, load an packmol output file into the VMD program by selecting **New Molecule** in the VMD main window.
 2. After loading an output file, select the **Extensions** and scroll down to the **Tk Console**. The Tk Console behaves like a terminal accepting input commands. 
 3. To find out what the periodic boundaries are, use the command `pbc get`. The first three numbers of this output will be the x, y, and z perimeters. 
-4. You should get 0.0, 0.0, 0.0 for a standard packmol output file. To change these so x,y, and z all are "120" use the following command
+4. You should get 0.0, 0.0, 0.0 for a standard packmol output file. To change these so x, y, and z all are "120" use the following command
 ```
     > pbc set "120 120. 120."
 ```
@@ -21,7 +21,7 @@ This sets the x, y, z parameters for the peridoic boundaries.
     # atomselect1
     >$sel moveby "10 10 10"
 ```
-This moves the atoms by the x,y, and z numbers specified in the quotations. 
+This moves the atoms by the x, y, and z numbers specified in the quotations. 
 
 ### Combining Two Packmol Output Files into one File
 1. Load the first output file into VMD by selecting **New Molecule** in the VMD main window.
@@ -46,15 +46,9 @@ This moves the atoms by the x,y, and z numbers specified in the quotations.
     >set midlist {}
     >set mol [mol new part1.xyz waitfor all]
     #1 
-    >mol addfile [part1.xyz]
-    #1
     > lappend midlist $mol
     #1
     > set mol [mol new part2.xyz waitfor all]
-    #2
-    >mol addfile [part2.xyz]
-    #2
-    >mol addfile part2.xyz $mol
     #2
     >lappend midlist $mol
     #1 2 
