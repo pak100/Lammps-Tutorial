@@ -104,4 +104,4 @@ Ar 2 10 8
 9. If the run was a success, then it will give you the running time on the last output line. 
 10. Congrats! You just ran your first packmol input file. The packmol program created an **output** file called ``argon.xyz`` (specified on your input script), which contains the coordinates all for the atoms. 
 
-(Still need to add exactly what you should see in the output file to give validation that the observation is correct)
+
