@@ -33,7 +33,7 @@
 5. Next, you need to *expand* your tar file (packmol.tar.gz). 
 
 ```
-    > tar -xzf packmol.tar.gz. 
+    > tar -xzf packmol.tar.gz 
 ```
 6. Now, change your directory into the packmol directory. 
 
